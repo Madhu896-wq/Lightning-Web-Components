@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Reactivity Page">
+        <div class="slds-m-around_medium">
+            <p>Parent Address: {userAddress}</p>
+            <lightning-button label="Update Address" onclick={updateAddress}></lightning-button>
+        </div>
+
+        <!-- ✅ Correct binding of property -->
+        <c-reactive-child user-address={userAddress} personal-details={personalDetails}></c-reactive-child>
+    </lightning-card>
+</template>

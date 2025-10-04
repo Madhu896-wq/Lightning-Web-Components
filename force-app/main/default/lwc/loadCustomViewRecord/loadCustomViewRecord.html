@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="LDS with custom View">
+        <lightning-record-view-form
+            record-id={recordId}
+            object-api-name={objApiName}>
+            
+            <div class="slds-grid slds-wrap">
+                <!-- First Row: 3 fields -->
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-output-field field-name="Email"></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-output-field field-name="Department"></lightning-output-field>
+                </div>
+
+                <!-- Second Row: 1 field spans full width (optional) -->
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

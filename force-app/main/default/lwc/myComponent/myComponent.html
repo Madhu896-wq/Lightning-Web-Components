@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Wire Methods">
+        <div class="slds-m-around_medium">
+            <template if:true={records.data}>
+                <template if:true={isAccount}>
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <p><strong>Name:</strong> {name}</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <p><strong>Rating:</strong> {rating}</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <p><strong>Phone:</strong> {phone}</p>
+                        </div>
+                    </div>
+                </template>
+
+                <template if:true={isOpportunity}>
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-size_1-of-3">
+                            <p><strong>Name:</strong> {opportunityName}</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <p><strong>Amount:</strong> {opportunityAmount}</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <p><strong>Stage:</strong> {opportunityStage}</p>
+                        </div>
+                    </div>
+                </template>
+            </template>
+
+            <template if:true={records.error}>
+                <p style="color:red;">Error loading record.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Zodiac Sign Messenger" icon-name="custom:custom63">
+
+        <!-- User Name Input -->
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                type="text" 
+                label="Enter Your Name" 
+                value={userName}
+                onchange={handleNameChange}>
+            </lightning-input>
+        </div>
+
+        <!-- Date of Birth Input -->
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                type="date" 
+                label="Enter Your Date of Birth" 
+                value={dateOfBirth}
+                onchange={handleDateChange}>
+            </lightning-input>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="slds-m-around_medium">
+            <lightning-button 
+                label="Get My Zodiac Sign" 
+                variant="brand" 
+                onclick={handleSubmit}>
+            </lightning-button>
+        </div>
+
+        <!-- Error Message -->
+        <template if:true={errorMessage}>
+            <div class="slds-m-around_medium slds-text-color_error slds-text-heading_small">
+                ⚠️ {errorMessage}
+            </div>
+        </template>
+
+        <!-- Zodiac Result -->
+        <template if:true={resultReceived}>
+            <div class="slds-m-around_medium slds-box slds-theme_success slds-text-heading_medium">
+                <p><b>{userName}</b>, your Zodiac Sign is:</p>
+                <p>{userProfile.emoji} <b>{userProfile.sign}</b></p>
+                <p>{userProfile.trait}</p>
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Parent Component"> 
+    <template if:true={receiedProducts}>
+        <p><strong>Received Products:</strong></p>
+    </template>
+    <template for:each={receiedProducts} for:item="book">
+        <p key={book.id}>{book.title} - {book.author} </p>
+    </template>
+
+    <template if:false={receiedProducts}>
+        <p> The products are yet to receive </p>
+    </template>
+    </lightning-card>
+    <c-child-event-trigger onproductlist={handleProductList}></c-child-event-trigger>
+</template>

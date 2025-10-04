@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Student">
+        <p>👦 I am the Student component</p>
+
+        <template if:true={question}>
+            <p>❓ Question is: {question}</p>
+        </template>
+
+        <template if:true={answer}>
+            <p>📘 Answer is: {answer}</p>
+        </template>
+    </lightning-card>
+</template>

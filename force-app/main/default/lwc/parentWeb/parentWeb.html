@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent">
+        <!-- ✅ Listen for custom event 'personinfo' -->
+        <c-child-web onpersoninfo={handlepersonevent}></c-child-web>
+
+        <div class="slds-m-top_medium">
+            <p><strong>Name:</strong> {name}</p>
+            <p><strong>Age:</strong> {age}</p>
+            <p><strong>City:</strong> {city}</p>
+        </div>
+    </lightning-card>
+</template>

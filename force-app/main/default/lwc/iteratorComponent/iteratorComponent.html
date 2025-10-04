@@ -1,0 +1,41 @@
+ <!--<template>
+    <lightning-card title='My Task Checks' icon-name="standard:task">
+       <p class="sdls-p-horizontal_small">
+            <template for:each={tasks} for:item="taskRecords" > 
+                <div class="slds-p-left_medium slds-p-vertical_x-small" key = {taskRecords.Id}>
+                {taskRecords.name} => {taskRecords.status}  
+               
+                </div>
+            </template>
+        </p>
+        <p slot="footer"> Continue the learnings</p>
+    </lightning-card>-->
+
+            
+<template>
+    <lightning-card title="My Task Checks" icon-name="standard:task">
+        <div class="slds-p-horizontal_small">
+            <template iterator:eachtask={tasks}> 
+                <div class="slds-p-left_medium slds-p-vertical_x-small" key={eachtask.value.Id}>
+                    <!-- Task Info -->
+                    {eachtask.value.name} => {eachtask.value.status}
+
+                    <!-- First Task Label -->
+                    <template lwc:if={eachtask.first}>
+                        <div class="slds-text-color_success slds-m-top_xx-small">
+                            🌟 The Most Priority Task
+                        </div>
+                    </template>
+
+                    <!-- Last Task Label -->
+                    <template lwc:if={eachtask.last}>
+                        <div class="slds-text-color_weak slds-m-top_xx-small">
+                            🔚 The Least Priority Task
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+        <p slot="footer">Continue the learnings</p>
+    </lightning-card>
+</template>

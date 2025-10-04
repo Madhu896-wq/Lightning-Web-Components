@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Components of LWC Family" >
+    Owner Component <br>
+      <template for:each={brands} for:item="brand">
+        <p key={brand.id}>
+            Car:{brand.car} =>  Brand:{brand.Model}</p>
+    </template>
+    <c-container-component names={Model}> </c-container-component> <br>
+     
+</lightning-card>
+</template>
