@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Creating a Record with Custom Layout">
+        <lightning-record-edit-form
+            object-api-name="Contact">
+           
+
+            <lightning-messages></lightning-messages>
+
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="AssistantName"></lightning-input-field>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="LastName"></lightning-input-field>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Phone"></lightning-input-field>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Department"></lightning-input-field>
+                </div>
+
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="AccountId"></lightning-input-field>
+                </div>
+
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-button class="slds-m-right_small" label="Create" type="submit" variant="brand"></lightning-button>
+                    <lightning-button label="Reset" type="reset" variant="neutral"></lightning-button>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
