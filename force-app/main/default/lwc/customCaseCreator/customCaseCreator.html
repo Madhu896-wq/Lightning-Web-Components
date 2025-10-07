@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Custome case Creator">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter some text" value={subject} onchange={handleSubjectChange}
+                placeholder="Enter your Name here..." required></lightning-input> 
+            <lightning-combobox name="Priority" label="Priority" value={priority} onchange={handlePriorityChange}
+                placeholder="Select Progress" options={options}></lightning-combobox>
+            <lightning-textarea name="input1" value={description} onchange={handleDescriptionChange}
+                label="Enter some text"></lightning-textarea>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="CreateCase" icon-name="utility:anywhere_alert" onclick={handleCreateCase}
+                class="slds-m-left_small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
